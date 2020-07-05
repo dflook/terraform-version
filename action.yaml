@@ -13,7 +13,7 @@ outputs:
 
 runs:
   using: docker
-  image: danielflook/terraform-github-actions:v0.0.7
+  image: danielflook/terraform-github-actions:v0.0.8
   entrypoint: /entrypoints/version.sh
 
 branding:
