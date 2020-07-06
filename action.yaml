@@ -13,10 +13,9 @@ outputs:
 
 runs:
   using: docker
-  image: docker://danielflook/terraform-github-actions:v0.1.1
+  image: docker://danielflook/terraform-github-actions:v0.1.3
   entrypoint: /entrypoints/version.sh
 
 branding:
   icon: globe
   color: purple
-
