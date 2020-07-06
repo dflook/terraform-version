@@ -20,29 +20,32 @@ outputs yourself.
 
 ## Inputs
 
-### `path`
+* `path`
 
-The path to a terraform configuration directory.
+  Path to the terraform configuration to apply
+
+  - Type: string
+  - Required
 
 ## Outputs
 
-### `terraform`
+* `terraform`
 
-The terraform version that is used by the terraform configuration
+  The terraform version that is used by the terraform configuration
 
-### Provider Versions
+* Provider Versions
 
-Additional outputs are added with the version of each provider that
-is used by the terraform configuration. For example, if the random
-provider is used:
+  Additional outputs are added with the version of each provider that
+  is used by the terraform configuration. For example, if the random
+  provider is used:
 
-```hcl
-provider "random" {
-  version = "2.2.0"
-}
-```
+  ```hcl
+  provider "random" {
+    version = "2.2.0"
+  }
+  ```
 
-A `random` output will be created with the value `2.2.0`.
+  A `random` output will be created with the value `2.2.0`.
 
 ## Example usage
 
@@ -58,7 +61,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Test terraform-version
-        uses: dflook/terraform-version@1
+        uses: dflook/terraform-version@v1
         id: terraform-version
         with:
           path: my-configuration
